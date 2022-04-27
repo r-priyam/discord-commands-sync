@@ -1,0 +1,7 @@
+{
+	"$schema": "https://raw.githubusercontent.com/favware/cliff-jumper/main/assets/cliff-jumper.schema.json",
+	"name": "discord-commands-sync",
+	"commitMessageTemplate": "chore(release): release {{new-version}}",
+	"packagePath": ".",
+	"verbose": true
+}

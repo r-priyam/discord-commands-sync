@@ -1,0 +1,57 @@
+[changelog]
+header = """
+# Changelog
+
+All notable changes to this project will be documented in this file.\n
+"""
+body = """
+{% if version %}\
+    ## [{{ version | trim_start_matches(pat="v") }}]\
+    {% if previous %}\
+        {% if previous.version %}\
+            (https://github.com/r-priyam/expecto-patronum/compare/{{ previous.version }}...{{ version }})\
+        {% else %}
+            (https://github.com/r-priyam/expecto-patronum/tree/{{ version }})\
+        {% endif %}\
+    {% endif %} \
+    - ({{ timestamp | date(format="%Y-%m-%d") }})
+{% else %}\
+    ## [unreleased]
+{% endif %}\
+{% for group, commits in commits | group_by(attribute="group") %}
+    ### {{ group | upper_first }}
+    {% for commit in commits %}
+        - {% if commit.breaking %}\
+            [**breaking**] \
+          {% endif %}\
+            {% if commit.scope %}\
+                **{{commit.scope}}:** \
+            {% endif %}\
+            {{ commit.message | upper_first }} ([{{ commit.id | truncate(length=7, end="") }}](https://github.com/r-priyam/expecto-patronum/commit/{{ commit.id }}))\
+    {% endfor %}
+{% endfor %}\n
+"""
+trim = true
+footer = ""
+
+[git]
+conventional_commits = true
+filter_unconventional = true
+commit_parsers = [
+    { message = "^feat", group = "Features 🎉"},
+    { message = "^fix", group = "Bug Fixes 🐛"},
+    { message = "^perf", group = "Performance 🚀"},
+    { message = "^refactor", group = "Refactor 🖌️"},
+	{ body = ".*security", group = "Security 🛡️"},
+    { message = "^style", group = "Styling 💅"},
+	{ message = ".*deprecated", body = ".*deprecated", group = "Deprecation 🏮"},
+	{ message = "^revert", skip = true},
+    { message = "^chore", skip = true},
+    { message = "^ci", skip = true},
+    { message = "^build", skip = true},
+]
+filter_commits = true
+tag_pattern = "v[0-9]*"
+ignore_tags = ""
+topo_order = false
+sort_commits = "newest"
