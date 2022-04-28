@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import { chatInputHandler } from '#functions/application-command-handler';
+import { REST } from '@discordjs/rest';
 import { checkEnvExists } from '#functions/check-env';
 import { initialResponse } from '#functions/initial-response';
-import { REST } from '@discordjs/rest';
+import { chatInputHandler } from '#functions/chat-input-handler';
 
 const env = await checkEnvExists();
 

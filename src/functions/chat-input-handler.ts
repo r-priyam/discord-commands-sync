@@ -1,19 +1,24 @@
 import pc from 'picocolors';
 import prompts from 'prompts';
 import type { REST } from '@discordjs/rest';
-import type { APIApplicationCommand } from 'discord-api-types/v10';
 import { deleteGuildApplicationCommand } from '#functions/delete-guild-command';
 import { fetchGuildApplicationCommands } from '#functions/fetch-guild-commands';
 import { fetchGlobalApplicationCommands } from '#functions/fetch-global-commands';
 import { deleteGlobalApplicationCommand } from '#functions/delete-global-command';
+import { APIApplicationCommand, ApplicationCommandType } from 'discord-api-types/v10';
 
-export async function applicationCommandHandler(rest: REST, clientId: string, commandLevel: string, guildId?: string) {
+export async function chatInputHandler(rest: REST, clientId: string, commandLevel: string, guildId?: string) {
   let commands: APIApplicationCommand[];
 
   if (commandLevel === 'global-command') {
-    commands = await fetchGlobalApplicationCommands(rest, clientId);
+    commands = await fetchGlobalApplicationCommands(rest, ApplicationCommandType.ChatInput, clientId);
   } else {
-    commands = await fetchGuildApplicationCommands(rest, clientId, guildId!);
+    commands = await fetchGuildApplicationCommands(rest, ApplicationCommandType.ChatInput, clientId, guildId!);
+  }
+
+  if (commands.length === 0) {
+    console.log(pc.bold(pc.red('Received 0 chat input command, exiting!')));
+    process.exit(1);
   }
 
   const commandToDeleteResponse = await prompts([

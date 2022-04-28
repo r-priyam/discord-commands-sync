@@ -1,5 +1,5 @@
-import { guildIdInput, initialChoices } from '#lib/prompts';
 import prompts from 'prompts';
+import { guildIdInput, initialChoices } from '#lib/prompts';
 
 export async function initialResponse() {
   let guildId: string | undefined = undefined;
