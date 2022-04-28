@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/r-priyam/discord-commands-sync/compare/v1.0.0...v1.1.0) - (2022-04-28)
+
+### Features 🎉
+
+- Implement application message command delete (#2) ([54008e1](https://github.com/r-priyam/discord-commands-sync/commit/54008e1087e27604a152d711ecfcbd1576bd1db2))
+
+### Refactor 🖌️
+
+- `application-command` to `chat-input-command` for better naming ([15c301c](https://github.com/r-priyam/discord-commands-sync/commit/15c301c400b7012f589f48ff46486336f5a531fc))
+
 ## [1.0.0](https://github.com/r-priyam/discord-commands-sync/compare/v0.1.0...v1.0.0) - (2022-04-28)
 
 ### Build 🛠️
