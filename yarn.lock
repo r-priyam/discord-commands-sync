@@ -1454,8 +1454,8 @@ __metadata:
     ts-node: ^10.7.0
     typescript: ^4.6.3
   bin:
-    cj: ./dist/cli.js
-    discord-commands-sync: ./dist/cli.js
+    cj: ./dist/index.js
+    discord-commands-sync: ./dist/index.js
   languageName: unknown
   linkType: soft
 

@@ -8,6 +8,7 @@
     "discord-interactions"
   ],
   "imports": {
+    "#functions/*": "./dist/functions/*.js",
     "#lib/*": "./dist/lib/*.js"
   },
   "homepage": "https://github.com/r-priyam/discord-commands-sync",
@@ -22,10 +23,10 @@
   "author": "r-priyam",
   "sideEffects": "false",
   "type": "module",
-  "main": "dist/cli.js",
+  "main": "dist/index.js",
   "bin": {
-    "cj": "./dist/cli.js",
-    "discord-commands-sync": "./dist/cli.js"
+    "cj": "./dist/index.js",
+    "discord-commands-sync": "./dist/index.js"
   },
   "files": [
     "dist/**/*.js"
