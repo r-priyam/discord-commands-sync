@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.2](https://github.com/r-priyam/discord-commands-sync/compare/v1.2.1...v1.2.2) - (2022-04-28)
+
+### Bug Fixes 🐛
+
+- Show `No Description` if command has no description ([b9280d0](https://github.com/r-priyam/discord-commands-sync/commit/b9280d07e28d33c712e2bd71a1ed21d29766a07b))
+
 ## [1.2.1](https://github.com/r-priyam/discord-commands-sync/compare/v1.2.0...v1.2.1) - (2022-04-28)
 
 ### Bug Fixes 🐛
