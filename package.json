@@ -7,10 +7,6 @@
     "discord.js",
     "discord-interactions"
   ],
-  "imports": {
-    "#functions/*": "./dist/functions/*.js",
-    "#lib/*": "./dist/lib/*.js"
-  },
   "homepage": "https://github.com/r-priyam/discord-commands-sync",
   "bugs": {
     "url": "https://github.com/r-priyam/discord-commands-sync/issues"
@@ -34,6 +30,7 @@
   "scripts": {
     "build": "tsc -b src",
     "clean": "node scripts/clean.mjs",
+    "commit": "git-cz",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint src --ext ts --fix",
     "prepack": "yarn build",
@@ -50,6 +47,11 @@
   },
   "lint-staged": {
     "*.{mjs,js,ts}": "eslint --fix --ext mjs,js,ts"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "eslintConfig": {
     "extends": "@sapphire"
@@ -74,6 +76,8 @@
     "@types/prompts": "^2.0.14",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -89,6 +93,10 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "imports": {
+    "#functions/*": "./dist/functions/*.js",
+    "#lib/*": "./dist/lib/*.js"
   },
   "packageManager": "yarn@3.2.0"
 }
