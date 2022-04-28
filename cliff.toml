@@ -1,8 +1,7 @@
 [changelog]
 header = """
-# Changelog
-
-All notable changes to this project will be documented in this file.
+# Changelog\n
+All notable changes to this project will be documented in this file.\n
 """
 body = """
 {% if version %}\
@@ -47,7 +46,7 @@ commit_parsers = [
 	{ message = "^revert", skip = true},
     { message = "^chore", skip = true},
     { message = "^ci", skip = true},
-    { message = "^build", skip = true},
+    { message = "^build", group = "Build 🛠️"},
 ]
 filter_commits = true
 tag_pattern = "v[0-9]*"
