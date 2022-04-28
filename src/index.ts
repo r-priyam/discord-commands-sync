@@ -2,9 +2,9 @@
 
 import { REST } from '@discordjs/rest';
 import { checkEnvExists } from '#functions/check-env';
-import { messageHandler } from '#functions/message-handler';
+import { messageHandler } from '#functions/handlers/message';
 import { initialResponse } from '#functions/initial-response';
-import { chatInputHandler } from '#functions/chat-input-handler';
+import { chatInputHandler } from '#functions/handlers/chat-input';
 
 const env = await checkEnvExists();
 
