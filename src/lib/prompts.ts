@@ -6,7 +6,7 @@ export const initialChoices: PromptObject[] = [
     name: 'commandType',
     message: 'Choose what you want to delete?',
     choices: [
-      { title: 'Application Command (Slash)', value: 'application-command' },
+      { title: 'Chat Input Command (Slash)', value: 'chat-input-command' },
       { title: 'User Command (Context Menu)', value: 'user-command' }
     ]
   },
