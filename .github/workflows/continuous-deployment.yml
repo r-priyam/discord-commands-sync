@@ -1,22 +1,27 @@
 name: Continuous Delivery
 
 on:
+  workflow_dispatch:
+    inputs:
+      prNumber:
+        description: The number of the PR that is being deployed
+        required: true
   push:
     branches:
       - main
 
 jobs:
   Publish:
-    name: Publish Next
+    name: Publish Next to NPM
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Project
-        uses: actions/checkout@dcd71f646680f2efd8db4afa5ad64fdcba30e748 # tag=v3
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
         with:
           fetch-depth: 0
       - name: Add TypeScript problem matcher
         run: echo "::add-matcher::.github/problemMatchers/tsc.json"
-      - name: Use Node.js v16 with Yarn Registry
+      - name: Use Node.js v16
         uses: actions/setup-node@56337c425554a6be30cdef71bf441f15be286854 # tag=v3
         with:
           node-version: 16
@@ -24,13 +29,10 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Install Dependencies
         run: yarn --immutable
-      - name: Build package
-        run: yarn build
-      - name: Publish to NPM
+      - name: Bump Version & Publish
         run: |
           TAG=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}')
-          yarn config set npmAuthToken ${NODE_AUTH_TOKEN}
-          yarn config set npmPublishRegistry "https://registry.npmjs.org/"
-          yarn npm publish --tag ${TAG}
+          npm version --git-tag-version=false $(jq --raw-output '.version' package.json)-next.$(git rev-parse --short HEAD)
+          npm publish --tag ${TAG}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
