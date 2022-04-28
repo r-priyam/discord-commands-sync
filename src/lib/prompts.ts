@@ -52,7 +52,7 @@ export const confirmObject = (command: APIApplicationCommand): PromptObject[] =>
       type: 'confirm',
       name: 'confirm',
       message: `Confirm if you want to ${pc.red('DELETE')} ${pc.blue('COMMAND:')} ${pc.yellow(command.name)} (${pc.yellow(
-        `Description - ${command.description}` || 'No Description'
+        `${command.description ? `Description: ${command.description}` : 'No Description'}`
       )})`
     }
   ];
