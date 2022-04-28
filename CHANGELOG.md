@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1](https://github.com/r-priyam/discord-commands-sync/compare/v1.2.0...v1.2.1) - (2022-04-28)
+
+### Bug Fixes 🐛
+
+- Add missing check for `ChatInput` command in guild fetch ([b32f431](https://github.com/r-priyam/discord-commands-sync/commit/b32f4318f7702530ea6e72a24399ebd1f6808fec))
+
+### Refactor 🖌️
+
+- Merge all handlers in one ([db333ce](https://github.com/r-priyam/discord-commands-sync/commit/db333ce4cb388176ac1d36e58ecbf44fd63c84fe))
+
 ## [1.2.0](https://github.com/r-priyam/discord-commands-sync/compare/v1.1.0...v1.2.0) - (2022-04-28)
 
 ### Features 🎉
