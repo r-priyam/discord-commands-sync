@@ -2,6 +2,7 @@
 
 import { REST } from '@discordjs/rest';
 import { checkEnvExists } from '#functions/check-env';
+import { userHandler } from '#functions/handlers/user';
 import { messageHandler } from '#functions/handlers/message';
 import { initialResponse } from '#functions/initial-response';
 import { chatInputHandler } from '#functions/handlers/chat-input';
@@ -18,4 +19,8 @@ if (commandType === 'chat-input-command') {
 
 if (commandType === 'message-command') {
   await messageHandler(rest, env.clientId, commandLevel, guildId);
+}
+
+if (commandType === 'user-command') {
+  await userHandler(rest, env.clientId, commandLevel, guildId);
 }

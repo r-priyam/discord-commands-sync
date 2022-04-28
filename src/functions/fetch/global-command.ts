@@ -17,5 +17,9 @@ export async function fetchGlobalApplicationCommands(rest: REST, commandType: Ap
     return commands.filter((command) => command.type === ApplicationCommandType.ChatInput);
   }
 
-  return commands.filter((command) => command.type === ApplicationCommandType.Message);
+  if (commandType === ApplicationCommandType.Message) {
+    return commands.filter((command) => command.type === ApplicationCommandType.Message);
+  }
+
+  return commands.filter((command) => command.type === ApplicationCommandType.User);
 }

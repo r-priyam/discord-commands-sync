@@ -13,9 +13,9 @@ export async function fetchGuildApplicationCommands(rest: REST, commandType: App
     process.exit(0);
   }
 
-  if (commandType === ApplicationCommandType.ChatInput) {
-    return commands.filter((command) => command.type === ApplicationCommandType.ChatInput);
+  if (commandType === ApplicationCommandType.Message) {
+    return commands.filter((command) => command.type === ApplicationCommandType.Message);
   }
 
-  return commands.filter((command) => command.type === ApplicationCommandType.Message);
+  return commands.filter((command) => command.type === ApplicationCommandType.User);
 }
