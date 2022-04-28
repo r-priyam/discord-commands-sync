@@ -1,7 +1,7 @@
 import pc from 'picocolors';
 import prompts from 'prompts';
 import type { REST } from '@discordjs/rest';
-import { commandDeleteChoices } from '#lib/prompts';
+import { commandDeleteChoices, confirmObject } from '#lib/prompts';
 import { deleteGuildApplicationCommand } from '#functions/delete-guild-command';
 import { fetchGuildApplicationCommands } from '#functions/fetch-guild-commands';
 import { fetchGlobalApplicationCommands } from '#functions/fetch-global-commands';
@@ -30,15 +30,7 @@ export async function chatInputHandler(rest: REST, clientId: string, commandLeve
 
   const commandToDelete = JSON.parse(commandToDeleteResponse.commandType) as APIApplicationCommand;
 
-  const confirmation = await prompts([
-    {
-      type: 'confirm',
-      name: 'confirm',
-      message: `Confirm if you want to ${pc.red('DELETE')} ${pc.blue('COMMAND:')} ${pc.yellow(commandToDelete.name)} (${pc.yellow(
-        `Description - ${commandToDelete.description}` || 'No Description'
-      )})`
-    }
-  ]);
+  const confirmation = await prompts(confirmObject(commandToDelete));
 
   if (!confirmation.confirm) {
     process.exit(1);
