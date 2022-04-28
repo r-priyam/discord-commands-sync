@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/r-priyam/discord-commands-sync/compare/v1.1.0...v1.2.0) - (2022-04-28)
+
+### Features 🎉
+
+- Implement application user command delete ([18c1868](https://github.com/r-priyam/discord-commands-sync/commit/18c1868cd2d8ed2b3f2a25cd0cd6e3062f476a87))
+
 ## [1.1.0](https://github.com/r-priyam/discord-commands-sync/compare/v1.0.0...v1.1.0) - (2022-04-28)
 
 ### Features 🎉
