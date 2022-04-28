@@ -2,16 +2,15 @@
 header = """
 # Changelog
 
-All notable changes to this project will be documented in this file.\n
+All notable changes to this project will be documented in this file.
 """
 body = """
 {% if version %}\
-    ## [{{ version | trim_start_matches(pat="v") }}]\
     {% if previous %}\
         {% if previous.version %}\
-            (https://github.com/r-priyam/expecto-patronum/compare/{{ previous.version }}...{{ version }})\
+            ## [{{ version | trim_start_matches(pat="v") }}](https://github.com/r-priyam/discord-commands-sync/compare/{{ previous.version }}...{{ version }})\
         {% else %}
-            (https://github.com/r-priyam/expecto-patronum/tree/{{ version }})\
+            ## [{{ version | trim_start_matches(pat="v") }}](https://github.com/r-priyam/discord-commands-sync/tree/{{ version }})\
         {% endif %}\
     {% endif %} \
     - ({{ timestamp | date(format="%Y-%m-%d") }})
@@ -27,7 +26,7 @@ body = """
             {% if commit.scope %}\
                 **{{commit.scope}}:** \
             {% endif %}\
-            {{ commit.message | upper_first }} ([{{ commit.id | truncate(length=7, end="") }}](https://github.com/r-priyam/expecto-patronum/commit/{{ commit.id }}))\
+            {{ commit.message | upper_first }} ([{{ commit.id | truncate(length=7, end="") }}](https://github.com/r-priyam/discord-commands-sync/commit/{{ commit.id }}))\
     {% endfor %}
 {% endfor %}\n
 """
