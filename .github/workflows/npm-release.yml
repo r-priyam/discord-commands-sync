@@ -1,9 +1,9 @@
-name: Publish package to GitHub Package Registry
+name: Publish package to NPM
 
 on:
-  release:
-    types:
-      - published
+  push:
+    tags:
+      - 'v*'
 
 jobs:
   Publish:
