@@ -1,4 +1,5 @@
 import type { PromptObject } from 'prompts';
+import type { APIApplicationCommand } from 'discord-api-types/v10';
 
 export const initialChoices: PromptObject[] = [
   {
@@ -28,3 +29,17 @@ export const guildIdInput: PromptObject[] = [
     message: 'Please enter the guild id to delete command for'
   }
 ];
+
+export const commandDeleteChoices = (commands: APIApplicationCommand[]): PromptObject[] => {
+  return [
+    {
+      type: 'select',
+      name: 'commandType',
+      message: 'Which command you want to delete?',
+      choices: commands.map((command) => ({
+        title: command.name,
+        value: JSON.stringify({ ...command })
+      }))
+    }
+  ];
+};

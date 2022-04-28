@@ -1,6 +1,7 @@
 import pc from 'picocolors';
 import prompts from 'prompts';
 import type { REST } from '@discordjs/rest';
+import { commandDeleteChoices } from '#lib/prompts';
 import { deleteGuildApplicationCommand } from '#functions/delete-guild-command';
 import { fetchGuildApplicationCommands } from '#functions/fetch-guild-commands';
 import { fetchGlobalApplicationCommands } from '#functions/fetch-global-commands';
@@ -21,17 +22,7 @@ export async function chatInputHandler(rest: REST, clientId: string, commandLeve
     process.exit(1);
   }
 
-  const commandToDeleteResponse = await prompts([
-    {
-      type: 'select',
-      name: 'commandType',
-      message: 'Which command you want to delete?',
-      choices: commands.map((command) => ({
-        title: command.name,
-        value: JSON.stringify({ ...command })
-      }))
-    }
-  ]);
+  const commandToDeleteResponse = await prompts(commandDeleteChoices(commands));
 
   if (!commandToDeleteResponse.commandType) {
     process.exit(1);
