@@ -21,7 +21,7 @@
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "cj": "./dist/index.js",
+    "dcs": "./dist/index.js",
     "discord-commands-sync": "./dist/index.js"
   },
   "files": [

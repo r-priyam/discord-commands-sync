@@ -1837,7 +1837,7 @@ __metadata:
     ts-node: ^10.8.0
     typescript: ^4.7.2
   bin:
-    cj: ./dist/index.js
+    dcs: ./dist/index.js
     discord-commands-sync: ./dist/index.js
   languageName: unknown
   linkType: soft
