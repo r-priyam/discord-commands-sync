@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.4](https://github.com/r-priyam/discord-commands-sync/compare/v1.2.3...v1.2.4) - (2022-06-01)
+
+### Bug Fixes 🐛
+
+- Short form of the package ([86fd2f0](https://github.com/r-priyam/discord-commands-sync/commit/86fd2f0da2ac220218f6c51128ba8734e0fae05e))
+
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
 ## [1.2.2](https://github.com/r-priyam/discord-commands-sync/compare/v1.2.1...v1.2.2) - (2022-04-28)
 
 ### Bug Fixes 🐛
