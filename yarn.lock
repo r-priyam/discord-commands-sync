@@ -696,7 +696,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:>=12, @types/node@npm:^17.0.29":
+"@types/node@npm:>=12":
   version: 17.0.29
   resolution: "@types/node@npm:17.0.29"
   checksum: bb9d7bce9d6d3882efd9d63b773b548dce98df4bd57eff8ceaa316aa2f3346e36d3618764cc93da84bbff92005174a35eec3465cde91ee973ef1c351ffa40074
@@ -707,6 +707,13 @@ __metadata:
   version: 14.18.26
   resolution: "@types/node@npm:14.18.26"
   checksum: c6ac3f9d4f6f77c0fa5ac17757779ad4d9835abfe3af5708b7552597cb5c7c1103e83499ccaf767a1cfa70040990bcf3f58761c547051dc8d5077f3c419091b1
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.11.18":
+  version: 18.11.18
+  resolution: "@types/node@npm:18.11.18"
+  checksum: 03f17f9480f8d775c8a72da5ea7e9383db5f6d85aa5fefde90dd953a1449bd5e4ffde376f139da4f3744b4c83942166d2a7603969a6f8ea826edfb16e6e3b49d
   languageName: node
   linkType: hard
 
@@ -1994,7 +2001,7 @@ __metadata:
     "@sapphire/prettier-config": ^1.4.4
     "@sapphire/ts-config": ^3.3.4
     "@types/eslint": ^8
-    "@types/node": ^17.0.29
+    "@types/node": ^18.11.18
     "@types/prettier": ^2
     "@types/prompts": ^2.4.1
     "@typescript-eslint/eslint-plugin": ^5.42.1
