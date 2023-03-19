@@ -60,7 +60,7 @@
     "minimist": "^1.2.8"
   },
   "dependencies": {
-    "@discordjs/rest": "^1.5.0",
+    "@discordjs/rest": "^1.6.0",
     "ora": "^6.1.2",
     "picocolors": "^1.0.0",
     "prompts": "^2.4.2"
@@ -73,12 +73,12 @@
     "@sapphire/eslint-config": "^4.3.8",
     "@sapphire/prettier-config": "^1.4.5",
     "@sapphire/ts-config": "^3.3.4",
-    "@types/eslint": "^8",
-    "@types/node": "^18.15.0",
-    "@types/prettier": "^2",
+    "@types/eslint": "^8.21.2",
+    "@types/node": "^18.15.3",
+    "@types/prettier": "^2.7.2",
     "@types/prompts": "^2.4.3",
-    "@typescript-eslint/eslint-plugin": "^5.54.1",
-    "@typescript-eslint/parser": "^5.54.1",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.36.0",
@@ -101,5 +101,5 @@
     "#functions/*": "./dist/functions/*.js",
     "#lib/*": "./dist/lib/*.js"
   },
-  "packageManager": "yarn@3.4.1"
+  "packageManager": "yarn@3.5.0"
 }
