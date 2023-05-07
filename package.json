@@ -60,28 +60,28 @@
     "minimist": "^1.2.8"
   },
   "dependencies": {
-    "@discordjs/rest": "^1.7.0",
+    "@discordjs/rest": "^1.7.1",
     "ora": "^6.3.0",
     "picocolors": "^1.0.0",
     "prompts": "^2.4.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.6.1",
-    "@commitlint/config-conventional": "^17.6.1",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
     "@favware/cliff-jumper": "^1.10.0",
     "@favware/npm-deprecate": "^1.0.7",
-    "@sapphire/eslint-config": "^4.4.1",
+    "@sapphire/eslint-config": "^4.4.2",
     "@sapphire/prettier-config": "^1.4.5",
     "@sapphire/ts-config": "^3.3.4",
     "@types/eslint": "^8.37.0",
-    "@types/node": "^18.16.3",
+    "@types/node": "^18.16.5",
     "@types/prettier": "^2.7.2",
     "@types/prompts": "^2.4.4",
-    "@typescript-eslint/eslint-plugin": "^5.59.1",
-    "@typescript-eslint/parser": "^5.59.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.39.0",
+    "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
@@ -101,5 +101,5 @@
     "#functions/*": "./dist/functions/*.js",
     "#lib/*": "./dist/lib/*.js"
   },
-  "packageManager": "yarn@3.5.0"
+  "packageManager": "yarn@3.5.1"
 }
