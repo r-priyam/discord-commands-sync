@@ -66,8 +66,8 @@
     "prompts": "^2.4.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.6.3",
-    "@commitlint/config-conventional": "^17.6.3",
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
     "@favware/cliff-jumper": "^1.10.0",
     "@favware/npm-deprecate": "^1.0.7",
     "@sapphire/eslint-config": "^4.4.2",
@@ -75,13 +75,13 @@
     "@sapphire/ts-config": "^3.3.4",
     "@types/eslint": "^8.40.0",
     "@types/node": "^18.16.16",
-    "@types/prettier": "^2.7.2",
+    "@types/prettier": "^2.7.3",
     "@types/prompts": "^2.4.4",
-    "@typescript-eslint/eslint-plugin": "^5.59.7",
-    "@typescript-eslint/parser": "^5.59.7",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.41.0",
+    "eslint": "^8.42.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
@@ -101,5 +101,5 @@
     "#functions/*": "./dist/functions/*.js",
     "#lib/*": "./dist/lib/*.js"
   },
-  "packageManager": "yarn@3.5.1"
+  "packageManager": "yarn@3.6.0"
 }
