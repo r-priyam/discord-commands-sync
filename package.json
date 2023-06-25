@@ -66,8 +66,8 @@
     "prompts": "^2.4.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.6.5",
-    "@commitlint/config-conventional": "^17.6.5",
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
     "@favware/cliff-jumper": "^1.10.0",
     "@favware/npm-deprecate": "^1.0.7",
     "@sapphire/eslint-config": "^4.4.2",
@@ -77,8 +77,8 @@
     "@types/node": "^18.16.18",
     "@types/prettier": "^2.7.3",
     "@types/prompts": "^2.4.4",
-    "@typescript-eslint/eslint-plugin": "^5.59.11",
-    "@typescript-eslint/parser": "^5.59.11",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.43.0",
