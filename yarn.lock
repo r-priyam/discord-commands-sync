@@ -602,12 +602,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.19.123":
-  version: 18.19.123
-  resolution: "@types/node@npm:18.19.123"
+"@types/node@npm:^18.19.130":
+  version: 18.19.130
+  resolution: "@types/node@npm:18.19.130"
   dependencies:
     undici-types: ~5.26.4
-  checksum: a450556143df831703fc20a96a1eff485fa425e5a6e887331991d3e00ab2d33981d36e94d4320f4961e96d22c488ced740913fed6de161daea5caf39722c5f49
+  checksum: b7032363581c416e721a88cffdc2b47662337cacd20f8294f5619a1abf79615c7fef1521964c2aa9d36ed6aae733e1a03e8c704661bd5a0c2f34b390f41ea395
   languageName: node
   linkType: hard
 
@@ -1626,7 +1626,7 @@ __metadata:
     "@sapphire/prettier-config": ^1.4.5
     "@sapphire/ts-config": ^3.3.4
     "@types/eslint": ^8.56.12
-    "@types/node": ^18.19.123
+    "@types/node": ^18.19.130
     "@types/prettier": ^2.7.3
     "@types/prompts": ^2.4.9
     "@typescript-eslint/eslint-plugin": ^5.60.1
