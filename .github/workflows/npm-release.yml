@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Use Node.js v16
-        uses: actions/setup-node@969bd2663942d722d85b6a8626225850c2f7be4b # tag=v3
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
           node-version: 16
           cache: yarn
