@@ -66,8 +66,8 @@
     "prompts": "^2.4.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.8.1",
-    "@commitlint/config-conventional": "^17.8.1",
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
     "@favware/cliff-jumper": "^1.10.0",
     "@favware/npm-deprecate": "^1.0.7",
     "@sapphire/eslint-config": "^4.4.3",
